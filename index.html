@@ -13,6 +13,84 @@
   <p>Get the latest news on how your code is doing right in your inbox</p>
   <hr class="horrizantal-line1">
   <hr class="horrizantal-line2">
+    <form>
+      <fieldset class="top">
+        <legend class="contact">
+          <h2 class="title1">Contact Information</h2>
+          <div class="f-name">
+          <label for="name">Full Name</label><br>
+          <input type="text" id="name" name="user-name" placeholder="Required"><br>
+          </div>
+
+          <div class="email-a">
+          <label for="mail">Email Address</label><br>
+          <input type="email" id="mail" name="user-name" placeholder="Required"><br>
+          </div>
+
+          <div class="phone-n">
+          <label for="phone">Phone Number</label><br>
+          <input type="tel" id="phone" name="user-phone"><br>
+          </div>
+
+          <div class="s-address">
+          <label for="address">Street Address</label><br>
+          <input type="text" id="address" name="user-address"><br>
+          </div>
+
+          <div class="city-n">
+          <label for="city">City</label><br>
+          <input type="text" id="city" name="user-city"><br>
+          </div>
+
+          <div class="state-n">
+          <label for="state">State</label><br>
+          <select id="state" name="user-state">
+          <option value="" hidden>Choose State</option>
+          <option value="new-york">New York</option>
+          <option value="montana">Montana</option>
+          <option value="ohio">Ohio</option>
+          <option value="california">California</option>
+          <option value="alaska">Alaska</option>
+          <option value="arizona">Arizona</option>
+          </select><br>
+          </div>
+
+          <div class="zip-c">
+          <label for="zip">Zip Code</label><br>
+          <input type="text" id="zip" name="user-zip"><br>
+          </div>
+        </legend>
+      </fieldset>
+      <hr>
+      <fieldset>
+        <legend>
+          <h2>Newsletter</h2>
+          <div>
+          <label>Select the newsletters you would like to receive</label><br>
+          <input type="checkbox" id="html-news" value="html-news" name="user-news"><label for="html-news">HTML News</label><br>
+          <input type="checkbox" id="css-news" value="css-news" name="user-news"><label for="css-news">CSS News</label><br>
+          <input type="checkbox" id="javascript-news" value="javascript-news" name="user-news"><label for="javascript-news">Javascript News</label><br>
+          </div>
+
+          <div>
+          <label>Newsletter format</label><br>
+          <input type="radio" id="html" value="html" name="user-format"><label for="html">HTML</label><br>
+          <input type="radio" id="plain-text" value="plain-text" name="user-format"><label for="plain-text">Plain text</label><br>
+          </div>
+
+          <div>
+          <label for="other-topics">Other topics you'd like to hear about</label><br>
+          <textarea id="other-topics" name="user-bio"></textarea>
+          </div>
+          <button type="submit">Sign Up</button>
+        </legend>
+      </fieldset>
+      <p>Copyright The Code Review</p>
+
+      
+    </form>
+
+
 
 </body>
 </html>
