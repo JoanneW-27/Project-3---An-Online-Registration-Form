@@ -8,17 +8,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@1..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>THE CODE REVIEW</h1>
-  <h2>Signup for our newsletter</h2>
-  <p>Get the latest news on how your code is doing right in your inbox</p>
-  <hr class="horrizantal-line1">
-  <hr class="horrizantal-line2">
+  <header>
+    <h1>THE CODE REVIEW</h1>
+    <h2>Signup for our newsletter</h2>
+    <p class="intro">Get the latest news on how your code is doing right in your inbox</p> <!-- Used the intro class as this paragraph is styled differently to the others -->
+  </header>
+  <div class="tablet-view"> <!-- Used tablet-view as the class to change the width of the display once the screen gets bigger past 768px -->
+    <hr class="horrizantal-line1"> <!-- Used different classes for the lines as they are styled slightly differently -->
+    <hr class="horrizantal-line2">
     <form>
-      <fieldset class="top">
-        <legend class="contact">
-          <h2 class="title1">Contact Information</h2>
-          <div class="f-name">
-          <label for="name">Full Name</label><br>
+      <fieldset class="top"> <!-- Split the form into two sections using the classes top and end to show this -->
+        <legend class="contact">Contact Information</legend>
+
+          <div class="f-name"> <!-- Split the form into smaller sections using divs to allow more flexibility when stlying and keeping it clear to see in the html -->
+          <label for="name">Full Name</label>
           <input type="text" id="name" name="user-name" placeholder="Required"><br>
           </div>
 
@@ -45,7 +48,7 @@
           <div class="state-n">
           <label for="state">State</label><br>
           <select id="state" name="user-state">
-          <option value="" hidden>Choose State</option>
+          <option value="" hidden>Choose State</option> <!-- Added the choose state to be shown when the page loads then to be hidden once another option is selected -->
           <option value="new-york">New York</option>
           <option value="montana">Montana</option>
           <option value="ohio">Ohio</option>
@@ -59,38 +62,42 @@
           <label for="zip">Zip Code</label><br>
           <input type="text" id="zip" name="user-zip"><br>
           </div>
-        </legend>
       </fieldset>
-      <hr>
-      <fieldset>
-        <legend>
-          <h2>Newsletter</h2>
-          <div>
-          <label>Select the newsletters you would like to receive</label><br>
-          <input type="checkbox" id="html-news" value="html-news" name="user-news"><label for="html-news">HTML News</label><br>
+
+      <hr class="horrizantal-line3">
+
+      <fieldset class="end">
+        <legend class="newslet">Newsletter</legend>
+
+          <p>Select the newsletters you would like to receive</p>
+          <div class="receive-boxes">
+          <input type="checkbox" id="html-news" value="html-news" name="user-news"><label for="html-news">HTML News</label><br> <!-- Added breaks to add some space between the options -->
           <input type="checkbox" id="css-news" value="css-news" name="user-news"><label for="css-news">CSS News</label><br>
           <input type="checkbox" id="javascript-news" value="javascript-news" name="user-news"><label for="javascript-news">Javascript News</label><br>
           </div>
+          <br>
 
-          <div>
-          <label>Newsletter format</label><br>
+          <p>Newsletter format</p>
+          <div class="news-boxes">
           <input type="radio" id="html" value="html" name="user-format"><label for="html">HTML</label><br>
           <input type="radio" id="plain-text" value="plain-text" name="user-format"><label for="plain-text">Plain text</label><br>
           </div>
-
-          <div>
+          <br>
+          
+          <div class="othertopics">
           <label for="other-topics">Other topics you'd like to hear about</label><br>
           <textarea id="other-topics" name="user-bio"></textarea>
           </div>
-          <button type="submit">Sign Up</button>
-        </legend>
-      </fieldset>
-      <p>Copyright The Code Review</p>
 
-      
+          <button type="submit">Sign Up</button>
+          
+      </fieldset>
     </form>
 
-
+    <footer> 
+      <p class="foot">Copyright The Code Review</p> 
+    </footer>
+  </div>
 
 </body>
 </html>
