@@ -1,18 +1,20 @@
-
 * {  /*Using the mobile-first approach*/
-  font-family: "Work Sans", sans-serif;
+  font-family: "Merriweather", serif;
   font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
   text-align: left;
   margin: 0 auto;
   width: auto;
   max-width: 100%;
-  font-size: 18px;
-  color: #5f5e5e;
+  font-size: 16px;
+  color: #575757;
 }
 
 h1, h2, .intro {
- text-align: center;
+  text-align: center;
 }
 
 h1 {
@@ -32,6 +34,10 @@ h2, .contact, .newslet { /*Targeting the titles*/
 .intro, .foot { /*Targeting the intro paragraph and the footer paragraph*/
   color:#A0A0A0;
   padding: 5px 20px 40px 20px;
+}
+
+p { 
+  padding: 5px 2px 2px 0px;
 }
 
 .horrizantal-line1,.horrizantal-line2, .horrizantal-line3 {
@@ -55,10 +61,16 @@ form, .top, .end {  /*Targeting the whole form and the main two sections inside*
   border: 1px;
 }
 
-.contact, .newslet { /*Targeting the two titles inside the form to match eachother*/
+.contact, .newslet { /*Targeting the two titles inside the form to match each other*/
   padding: 25px 10px 20px 0 ;
   margin: 1px;
   width: 100%;
+}
+
+input::placeholder {
+  text-align: end;
+  padding: 0 20px 0 0; 
+  font-style: italic;
 }
 
 #name, #mail, #phone, #address, #city, #state, #zip, #other-topics { /*Targeting all the input boxes*/
@@ -71,6 +83,10 @@ form, .top, .end {  /*Targeting the whole form and the main two sections inside*
 
 #zip { /*Altering the zip input box to be shorter than the others*/
   width: 50%;
+}
+
+#other-topics {
+  height: 80px;
 }
 
  #html-news, #css-news, #javascript-news, #html, #plain-text { /*Targeting all the checkboxes*/
@@ -88,20 +104,22 @@ button {
   padding: 15px;
 }
 
-input:focus {
-  background-color: #91DAF0;
+input, select, textarea {
+  background-color: #F2F2F2;
+  transition: background-color 1s; /*This is to make the background color, from the focus states, fade in and out*/
 }
 
-select:focus {
-  background-color: #f3b7f0;
+input:focus, select:focus, textarea:focus { /*Targeting the boxes once they are clicked on*/
+  background-color: #b0e8ee;
+  border-color: #2b5068;
 }
 
-textarea:focus {
-  background-color: #e786ac;
+.end-background {
+  background-color: #cbe6f5;
 }
 
 .foot { /*Targeting the text at the bottom inside the footer*/
-  padding: 20px;
+  padding: 40px 0 50px 0;
   text-align: center;
   font-style: italic;
 }
@@ -132,6 +150,5 @@ textarea:focus {
     align-self: center;
     width: 25%;
   }
-
 
 }

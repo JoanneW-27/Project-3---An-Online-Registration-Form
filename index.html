@@ -6,7 +6,6 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@1..144,1..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
 <body>
   <header>
     <h1>THE CODE REVIEW</h1>
@@ -20,29 +19,29 @@
       <fieldset class="top"> <!-- Split the form into two sections using the classes top and end to show this -->
         <legend class="contact">Contact Information</legend>
 
-          <div class="f-name"> <!-- Split the form into smaller sections using divs to allow more flexibility when stlying and keeping it clear to see in the html -->
+          <div class="f-name"> <!-- Split the form into smaller sections using divs to allow more flexibility when styling and keeping it clear to see in the html -->
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="user-name" placeholder="Required"><br>
+          <input type="text" id="name" name="user-name" placeholder="Required" required><br>
           </div>
 
           <div class="email-a">
           <label for="mail">Email Address</label><br>
-          <input type="email" id="mail" name="user-name" placeholder="Required"><br>
+          <input type="email" id="mail" name="user-email" placeholder="Required" required><br>
           </div>
 
           <div class="phone-n">
           <label for="phone">Phone Number</label><br>
-          <input type="tel" id="phone" name="user-phone"><br>
+          <input type="tel" id="phone" name="user-phone" placeholder="e.g. 555 555 0199"><br>
           </div>
 
           <div class="s-address">
           <label for="address">Street Address</label><br>
-          <input type="text" id="address" name="user-address"><br>
+          <input type="text" id="address" name="user-address" placeholder="e.g. 124 Main Street"><br>
           </div>
 
           <div class="city-n">
           <label for="city">City</label><br>
-          <input type="text" id="city" name="user-city"><br>
+          <input type="text" id="city" name="user-city" placeholder="e.g. New York"><br>
           </div>
 
           <div class="state-n">
@@ -60,12 +59,13 @@
 
           <div class="zip-c">
           <label for="zip">Zip Code</label><br>
-          <input type="text" id="zip" name="user-zip"><br>
+          <input type="text" id="zip" name="user-zip" placeholder="e.g. 10001"><br>
           </div>
       </fieldset>
 
-      <hr class="horrizantal-line3">
-
+  <hr class="horrizantal-line3">
+ 
+    <div class="end-background"> <!-- This div is for adding a background color to the last section of the form -->
       <fieldset class="end">
         <legend class="newslet">Newsletter</legend>
 
@@ -86,12 +86,13 @@
           
           <div class="othertopics">
           <label for="other-topics">Other topics you'd like to hear about</label><br>
-          <textarea id="other-topics" name="user-bio"></textarea>
+          <textarea id="other-topics" name="user-bio" placeholder="Enter Your Text Here"></textarea>
           </div>
 
           <button type="submit">Sign Up</button>
           
       </fieldset>
+    </div>
     </form>
 
     <footer> 
