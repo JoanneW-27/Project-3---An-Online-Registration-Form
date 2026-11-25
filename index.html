@@ -13,41 +13,41 @@
     <p class="intro">Get the latest news on how your code is doing right in your inbox</p> <!-- Used the intro class as this paragraph is styled differently to the others -->
   </header>
   <div class="tablet-view"> <!-- Used tablet-view as the class to change the width of the display once the screen gets bigger past 768px -->
-    <hr class="horrizantal-line1"> <!-- Used different classes for the lines as they are styled slightly differently -->
-    <hr class="horrizantal-line2">
+    <hr class="horizontal-line1"> <!-- Used different classes for the lines as they are styled slightly differently -->
+    <hr class="horizontal-line2">
     <form>
       <fieldset class="top"> <!-- Split the form into two sections using the classes top and end to show this -->
         <legend class="contact">Contact Information</legend>
 
-          <div class="f-name"> <!-- Split the form into smaller sections using divs to allow more flexibility when styling and keeping it clear to see in the html -->
+          <div class="name-section"> <!-- Split the form into smaller sections using divs to allow more flexibility when styling and keeping it clear to see in the html -->
           <label for="name">Full Name</label>
-          <input type="text" id="name" name="user-name" placeholder="Required" required><br>
+          <input type="text" id="name" name="user-name" placeholder="Required" required><br> <!-- Added the required attribute to ensure it's filled out-->
           </div>
 
-          <div class="email-a">
+          <div class="email-section">
           <label for="mail">Email Address</label><br>
-          <input type="email" id="mail" name="user-email" placeholder="Required" required><br>
+          <input type="email" id="mail" name="user-email" placeholder="Required" required><br> <!-- Added the required attribute to ensure it's filled out-->
           </div>
 
-          <div class="phone-n">
+          <div class="phone-section">
           <label for="phone">Phone Number</label><br>
           <input type="tel" id="phone" name="user-phone" placeholder="e.g. 555 555 0199"><br>
           </div>
 
-          <div class="s-address">
+          <div class="street-section">
           <label for="address">Street Address</label><br>
           <input type="text" id="address" name="user-address" placeholder="e.g. 124 Main Street"><br>
           </div>
 
-          <div class="city-n">
+          <div class="city-section">
           <label for="city">City</label><br>
           <input type="text" id="city" name="user-city" placeholder="e.g. New York"><br>
           </div>
 
-          <div class="state-n">
+          <div class="state-section">
           <label for="state">State</label><br>
           <select id="state" name="user-state">
-          <option value="" hidden>Choose State</option> <!-- Added the choose state to be shown when the page loads then to be hidden once another option is selected -->
+          <option value="">Choose State</option> <!-- Added the choose state to be shown when the page loads -->
           <option value="new-york">New York</option>
           <option value="montana">Montana</option>
           <option value="ohio">Ohio</option>
@@ -57,42 +57,42 @@
           </select><br>
           </div>
 
-          <div class="zip-c">
+          <div class="zip-section">
           <label for="zip">Zip Code</label><br>
           <input type="text" id="zip" name="user-zip" placeholder="e.g. 10001"><br>
           </div>
       </fieldset>
 
-  <hr class="horrizantal-line3">
+      <hr class="horizontal-line3">
  
-    <div class="end-background"> <!-- This div is for adding a background color to the last section of the form -->
-      <fieldset class="end">
-        <legend class="newslet">Newsletter</legend>
+      <div class="end-background"> <!-- This div is for adding a background color to the last section of the form -->
+        <fieldset class="end">
+          <legend class="newslet">Newsletter</legend>
 
-          <p>Select the newsletters you would like to receive</p>
-          <div class="receive-boxes">
-          <input type="checkbox" id="html-news" value="html-news" name="user-news"><label for="html-news">HTML News</label><br> <!-- Added breaks to add some space between the options -->
-          <input type="checkbox" id="css-news" value="css-news" name="user-news"><label for="css-news">CSS News</label><br>
-          <input type="checkbox" id="javascript-news" value="javascript-news" name="user-news"><label for="javascript-news">Javascript News</label><br>
-          </div>
-          <br>
+            <p>Select the newsletters you would like to receive</p>
+            <div class="receive-boxes">
+            <input type="checkbox" id="html-news" value="html-news" name="user-news"><label for="html-news">HTML News</label><br> <!-- Added breaks to add some space between the options -->
+            <input type="checkbox" id="css-news" value="css-news" name="user-news"><label for="css-news">CSS News</label><br>
+            <input type="checkbox" id="javascript-news" value="javascript-news" name="user-news"><label for="javascript-news">Javascript News</label><br>
+            </div>
+            <br>
 
-          <p>Newsletter format</p>
-          <div class="news-boxes">
-          <input type="radio" id="html" value="html" name="user-format"><label for="html">HTML</label><br>
-          <input type="radio" id="plain-text" value="plain-text" name="user-format"><label for="plain-text">Plain text</label><br>
-          </div>
-          <br>
+            <p>Newsletter format</p>
+            <div class="news-boxes">
+            <input type="radio" id="html" value="html" name="user-format"><label for="html">HTML</label><br>
+            <input type="radio" id="plain-text" value="plain-text" name="user-format"><label for="plain-text">Plain text</label><br>
+            </div>
+            <br>
           
-          <div class="othertopics">
-          <label for="other-topics">Other topics you'd like to hear about</label><br>
-          <textarea id="other-topics" name="user-bio" placeholder="Enter Your Text Here"></textarea>
-          </div>
+            <div class="othertopics">
+            <label for="other-topics">Other topics you'd like to hear about</label><br>
+            <textarea id="other-topics" name="user-bio" placeholder="Enter Your Text Here"></textarea>
+            </div>
 
-          <button type="submit">Sign Up</button>
+            <button type="submit">Sign Up</button>
           
-      </fieldset>
-    </div>
+        </fieldset>
+      </div>
     </form>
 
     <footer> 

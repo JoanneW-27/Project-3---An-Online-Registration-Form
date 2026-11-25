@@ -1,38 +1,41 @@
-* {  /*Using the mobile-first approach*/
+* {    /*Using the mobile-first approach*/
   font-family: "Merriweather", serif;
-  font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-  "wdth" 100;
-  text-align: left;
-  margin: 0 auto;
-  width: auto;
-  max-width: 100%;
   font-size: 16px;
   color: #575757;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100%;
+  border: none; 
 }
 
-h1, h2, .intro {
+body {
+  width: 100%;
+  text-align: left;
+}
+
+h1, h2, .intro, button, .foot {
   text-align: center;
+}
+
+h1, h2, .contact, .newslet {
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  padding: 30px 25px 10px 25px;
 }
 
 h1 {
   color:white;
-  background:#1F3B4D;
   padding: 30px;
-  font-size: 22px;
 }
 
-h2, .contact, .newslet { /*Targeting the titles*/
-  color: black;
-  padding: 30px 25px 10px 25px;
-  font-size: 20px;
-  font-weight: 700;
+h1, .horizontal-line1, .horizontal-line2, .horizontal-line3 {
+  background:#1F3B4D;
 }
 
 .intro, .foot { /*Targeting the intro paragraph and the footer paragraph*/
-  color:#A0A0A0;
+  color:#757575;
   padding: 5px 20px 40px 20px;
 }
 
@@ -40,53 +43,44 @@ p {
   padding: 5px 2px 2px 0px;
 }
 
-.horrizantal-line1,.horrizantal-line2, .horrizantal-line3 {
-  background:#1F3B4D;
+.horizontal-line1 {
   padding: 4px;
   margin: 0 10px;
 }
 
-.horrizantal-line2, .horrizantal-line3 {
+.horizontal-line2, .horizontal-line3 {
   padding: 1.5px;
   margin: 2px 10px 0 10px;
 }
 
-.horrizantal-line3 {
+.horizontal-line3 {
   margin: 30px 0 5px 0;
-}
-
-form, .top, .end {  /*Targeting the whole form and the main two sections inside*/
-  width: 95%;
-  padding: 0;
-  border: 1px;
 }
 
 .contact, .newslet { /*Targeting the two titles inside the form to match each other*/
   padding: 25px 10px 20px 0 ;
   margin: 1px;
-  width: 100%;
 }
 
 input::placeholder {
   text-align: end;
-  padding: 0 20px 0 0; 
+  padding-right: 20px; 
   font-style: italic;
 }
 
-#name, #mail, #phone, #address, #city, #state, #zip, #other-topics { /*Targeting all the input boxes*/
-  width: 99%;
-  height: 99%;
-  padding: 15px 0 15px 5px;
+#name, #mail, #phone, #address, #city, #state, #zip, #other-topics, button { /*Targeting all the input boxes and button*/
+  width: 100%;
+  padding: 15px 5px;
   margin: 10px 0 20px 0;
   border-radius: 5px;
 }
 
-#zip { /*Altering the zip input box to be shorter than the others*/
+#zip { /*Altering the zip input box to be half the width*/
   width: 50%;
 }
 
-#other-topics {
-  height: 80px;
+#other-topics {  /*Altering the other topics text box to be bigger than the others*/
+  height: 120px;
 }
 
  #html-news, #css-news, #javascript-news, #html, #plain-text { /*Targeting all the checkboxes*/
@@ -94,24 +88,18 @@ input::placeholder {
  }
 
 button {
-  width: 100%;
-  height: 100%;
   font-size: 25px;
   background: rgb(33, 168, 168);
-  border-radius: 5px;
   color: white;
-  text-align: center;
-  padding: 15px;
 }
 
-input, select, textarea {
-  background-color: #F2F2F2;
+input, select, textarea { 
+  background-color: #F2F2F2; /*This is for the background color before the box is clicked on*/
   transition: background-color 1s; /*This is to make the background color, from the focus states, fade in and out*/
 }
 
 input:focus, select:focus, textarea:focus { /*Targeting the boxes once they are clicked on*/
   background-color: #b0e8ee;
-  border-color: #2b5068;
 }
 
 .end-background {
@@ -120,7 +108,6 @@ input:focus, select:focus, textarea:focus { /*Targeting the boxes once they are 
 
 .foot { /*Targeting the text at the bottom inside the footer*/
   padding: 40px 0 50px 0;
-  text-align: center;
   font-style: italic;
 }
 
@@ -128,20 +115,24 @@ input:focus, select:focus, textarea:focus { /*Targeting the boxes once they are 
 
   .tablet-view { /*Altering the whole section sizing for bigger screens*/
     width: 85%;
+    max-width: 1000px;
   }
 
-  .f-name, .email-a, .phone-n, .s-address, .city-n, .state-n, .zip-c { /*Targeting the individual divs to change the layout, moving the text next to the input box*/
+  .contact, .newslet {
+    padding: 40px 10px 25px 0;
+  }
+
+  .name-section, .email-section, .phone-section, .street-section, .city-section, .state-section, .zip-section { /*Targeting the individual divs to change the layout, moving the label text next to the input box*/
     display: flex;
     flex-direction: row;
   }
 
   #name, #mail, #phone, #address, #city, #state, #zip { /*Altering the input box sizing*/
     width: 75%;
-    height: 75%;
   }
 
-  #zip { /*Altering the zip input box to be even shorter*/
-    width: 30%;
+  #zip { /*Altering the zip input box to be around a quarter of the width*/
+    width: 25%;
   }
 
   label[for="name"], label[for="mail"], label[for="phone"], label[for="address"], label[for="city"], label[for="state"], label[for="zip"] { /*Targeting the text labels next to the input boxes*/
