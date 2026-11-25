@@ -83,9 +83,9 @@ input::placeholder {
   height: 120px;
 }
 
- #html-news, #css-news, #javascript-news, #html, #plain-text { /*Targeting all the checkboxes*/
+#html-news, #css-news, #javascript-news, #html, #plain-text { /*Targeting all the checkboxes*/
   margin: 20px 25px 5px 5px;
- }
+}
 
 button {
   font-size: 25px;
